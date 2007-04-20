@@ -3,12 +3,12 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
-%define _requires_exceptions	pear(Smarty.class.php)\\|pear(HTML/Progress2/Observer.php)
+%define _requires_exceptions	pear(Smarty.class.php)\\|pear(HTML/Progress2/Observer.php)\\|pear(PHPUnit.php)
 
 Summary:	%{_pearname} - How to include a loading bar in your XHTML documents quickly and easily
 Name:		php-pear-%{_pearname}
 Version:	2.2.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/HTML_Progress2
@@ -97,5 +97,3 @@ rm -rf %{buildroot}
 %{_datadir}/pear/%{_class}/*.php
 %{_datadir}/pear/%{_class}/%{_subclass}
 %{_datadir}/pear/packages/%{_pearname}.xml
-
-
