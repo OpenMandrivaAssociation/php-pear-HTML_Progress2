@@ -8,7 +8,7 @@
 Summary:	%{_pearname} - How to include a loading bar in your XHTML documents quickly and easily
 Name:		php-pear-%{_pearname}
 Version:	2.2.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/HTML_Progress2
@@ -16,7 +16,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
-Requires:	smarty
+Requires:	php-smarty
 BuildArch:	noarch
 BuildRequires:	dos2unix
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
