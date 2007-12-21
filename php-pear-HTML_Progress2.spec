@@ -19,6 +19,7 @@ Requires:	php-pear
 Requires:	php-smarty
 BuildArch:	noarch
 BuildRequires:	dos2unix
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This package provides a way to add a loading bar fully customizable in existing XHTML documents.
