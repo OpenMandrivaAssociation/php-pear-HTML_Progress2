@@ -22,13 +22,16 @@ BuildRequires:	dos2unix
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
-This package provides a way to add a loading bar fully customizable in existing XHTML documents.
+This package provides a way to add a loading bar fully customizable in existing
+XHTML documents.
 Your browser should accept DHTML feature.
 
 Features:
-- create horizontal, vertival bar and also circle, ellipse and polygons (square, rectangle).
+- create horizontal, vertival bar and also circle, ellipse and polygons
+  (square, rectangle).
 - allows usage of existing external StyleSheet and/or JavaScript.
-- all elements (progress, cells, labels) are customizable by their html properties.
+- all elements (progress, cells, labels) are customizable by their html
+  properties.
 - percent/labels are floating all around the progress meter.
 - compliant with all CSS/XHMTL standards.
 - integration with all template engines is very easy.
@@ -36,8 +39,8 @@ Features:
 - adds a customizable monitor pattern to display a progress bar.
   User-end can abort progress at any time.
 - allows many progress meter on same page without uses of iframe solution.
-- error handling system that support native PEAR_Error, but also PEAR_ErrorStack, and
-  any other system you might want to plug-in.
+- error handling system that support native PEAR_Error, but also
+  PEAR_ErrorStack, and any other system you might want to plug-in.
 - PHP 5 ready.
 
 This class has in PEAR status: %{_status}.
