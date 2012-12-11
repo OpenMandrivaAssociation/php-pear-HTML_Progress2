@@ -87,3 +87,74 @@ fi
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/data/%{upstream_name}
 %{_datadir}/pear/packages/%{upstream_name}.xml
+
+
+%changelog
+* Fri Dec 16 2011 Oden Eriksson <oeriksson@mandriva.com> 2.4.1-7mdv2012.0
++ Revision: 741996
+- fix major breakage by careless packager
+
+* Fri May 27 2011 Oden Eriksson <oeriksson@mandriva.com> 2.4.1-6
++ Revision: 679347
+- mass rebuild
+
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 2.4.1-5mdv2011.0
++ Revision: 613673
+- the mass rebuild of 2010.1 packages
+
+* Sat Dec 12 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.4.1-4mdv2010.1
++ Revision: 477870
+- spec cleanup
+- use pear installer
+- don't ship tests, even in documentation
+- own all directories
+- use rpm filetriggers starting from mandriva 2010.1
+
+* Mon Sep 14 2009 Thierry Vignaud <tv@mandriva.org> 2.4.1-3mdv2010.0
++ Revision: 441120
+- rebuild
+
+* Thu Jan 01 2009 Oden Eriksson <oeriksson@mandriva.com> 2.4.1-2mdv2009.1
++ Revision: 322115
+- rebuild
+
+* Tue Sep 02 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.4.1-1mdv2009.0
++ Revision: 278918
+- update to new version 2.4.1
+
+* Thu Jul 17 2008 Oden Eriksson <oeriksson@mandriva.com> 2.2.0-4mdv2009.0
++ Revision: 236874
+- rebuild
+
+* Tue Feb 12 2008 Thierry Vignaud <tv@mandriva.org> 2.2.0-3mdv2008.1
++ Revision: 166718
+- fix description-line-too-long
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Fri Aug 31 2007 Oden Eriksson <oeriksson@mandriva.com> 2.2.0-3mdv2008.0
++ Revision: 76964
+- fix deps
+
+* Fri Apr 20 2007 Oden Eriksson <oeriksson@mandriva.com> 2.2.0-2mdv2008.0
++ Revision: 15465
+- rule out the PHPUnit.php dep
+
+
+* Sat Mar 10 2007 Oden Eriksson <oeriksson@mandriva.com> 2.2.0-1mdv2007.1
++ Revision: 140467
+- 2.2.0
+- fix deps
+
+* Sat Nov 11 2006 Oden Eriksson <oeriksson@mandriva.com> 2.0.0-2mdv2007.1
++ Revision: 81633
+- Import php-pear-HTML_Progress2
+
+* Fri Feb 10 2006 Oden Eriksson <oeriksson@mandriva.com> 2.0.0-2mdk
+- new group (Development/PHP)
+
+* Mon Nov 07 2005 Oden Eriksson <oeriksson@mandriva.com> 2.0.0-1mdk
+- initial Mandriva package
+
