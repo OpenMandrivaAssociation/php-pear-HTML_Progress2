@@ -2,11 +2,9 @@
 %define         _subclass       Progress2
 %define		upstream_name	%{_class}_%{_subclass}
 
-%define _requires_exceptions	pear(Smarty.class.php)\\|pear(HTML/Progress2/Observer.php)\\|pear(PHPUnit.php)
-
 Name:		php-pear-%{upstream_name}
 Version:	2.4.1
-Release:	%mkrel 7
+Release:	8
 Summary:	How to include a loading bar in your XHTML documents quickly and easily
 License:	PHP License
 Group:		Development/PHP
@@ -18,7 +16,6 @@ Requires:	php-pear
 Requires:	php-smarty
 BuildArch:	noarch
 BuildRequires:	php-pear
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This package provides a way to add a loading bar fully customizable in existing
@@ -42,14 +39,11 @@ Features:
   PEAR_ErrorStack, and any other system you might want to plug-in.
 - PHP 5 ready.
 
-This class has in PEAR status: %{_status}.
-
 %prep
 %setup -q -c
 mv package.xml %{upstream_name}-%{version}/%{upstream_name}.xml
 
 %install
-rm -rf %{buildroot}
 
 cd %{upstream_name}-%{version}
 pear install --nodeps --packagingroot %{buildroot} %{upstream_name}.xml
@@ -62,21 +56,8 @@ install -d %{buildroot}%{_datadir}/pear/packages
 install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 %clean
-rm -rf %{buildroot}
 
-%post
-%if %mdkversion < 201000
-pear install --nodeps --soft --force --register-only \
-    %{_datadir}/pear/packages/%{upstream_name}.xml >/dev/null || :
-%endif
 
-%preun
-%if %mdkversion < 201000
-if [ "$1" -eq "0" ]; then
-    pear uninstall --nodeps --ignore-errors --register-only \
-        %{upstream_name} >/dev/null || :
-fi
-%endif
 
 %files
 %defattr(-,root,root)
